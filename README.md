@@ -78,7 +78,7 @@ GROUP BY pizza_types.name
 ORDER BY most_ordered_quantity DESC
 LIMIT 5;
 ```
-📁 Output:`"C:\Users\vidhi\OneDrive\Desktop\coding\sql_pizza_sales_Project\Outputs\Top_5_most_ordered_pizza_type.csv"`
+📁 Output:`C:\Users\vidhi\OneDrive\Desktop\coding\sql_pizza_sales_Project\Outputs\Top_5_most_ordered_pizza_type.csv`
 📈 Key Insights
 Large-sized pizzas are the most preferred among customers
 A few pizza types contribute significantly to overall revenue
