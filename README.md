@@ -93,20 +93,82 @@ ORDER BY order_count DESC
 LIMIT 1;
 ```
 📁 Output:(https://github.com/tanuvidhilitoriya1310-png/pizza-sales-analytics-project-sql/blob/master/Outputs/Most_Common_Pizza_size_ordered.csv)
-
-📈 Key Insights
-Large-sized pizzas are the most preferred among customers
-A few pizza types contribute significantly to overall revenue
-Peak order times occur during evening hours
-Certain categories consistently outperform others in sales
-🚀 Conclusion
-This project demonstrates how SQL can be effectively used to analyze structured data and extract valuable business insights. The findings can help improve sales strategies, inventory management, and customer satisfaction.
-📌 Future Improvements
-Integrate with Power BI for interactive dashboards
-Perform predictive analysis using Python
-Automate reporting using scripts
-🙌 Author
+### 🔹 5. What is the total quantity ordered for each pizza category?
+```sql
+SELECT 
+    pizza_types.category,
+    SUM(order_details.quantity) AS total_quantity
+FROM
+    pizza_types
+        INNER JOIN
+    pizzas ON pizza_types.pizza_type_id = pizzas.pizza_type_id
+        INNER JOIN
+    order_details ON order_details.pizza_id = pizzas.pizza_id
+GROUP BY pizza_types.category
+ORDER BY total_quantity DESC;
+```
+📁 Output:(https://github.com/tanuvidhilitoriya1310-png/pizza-sales-analytics-project-sql/blob/master/Outputs/Total_quantity_of_each_pizza_category_ordered.csv)
+### 🔹 6. Which are the top 3 pizza types based on revenue?
+```sql
+SELECT 
+    pizza_types.name AS pizza,
+    ROUND(SUM(order_details.quantity * pizzas.price),
+            0) AS revenue
+FROM
+    pizza_types
+        INNER JOIN
+    pizzas ON pizza_types.pizza_type_id = pizzas.pizza_type_id
+        INNER JOIN
+    order_details ON order_details.pizza_id = pizzas.pizza_id
+GROUP BY pizza
+ORDER BY revenue DESC
+LIMIT 3;
+```
+📁 Output:(https://github.com/tanuvidhilitoriya1310-png/pizza-sales-analytics-project-sql/blob/master/Outputs/Top_3_pizza_types_based_on_revenue.csv)
+### 🔹 7. What percentage of total revenue does each pizza type contribute?
+```sql
+SELECT 
+    pizza_types.category AS pizza_type,
+    CONCAT(ROUND((SUM(order_details.quantity * pizzas.price) / (SELECT 
+                            SUM(order_details.quantity * pizzas.price)
+                        FROM
+                            order_details
+                                INNER JOIN
+                            pizzas ON order_details.pizza_id = pizzas.pizza_id) * 100),
+                    2),
+            '%') AS total_revenue
+FROM
+    pizza_types
+        INNER JOIN
+    pizzas ON pizza_types.pizza_type_id = pizzas.pizza_type_id
+        INNER JOIN
+    order_details ON order_details.pizza_id = pizzas.pizza_id
+GROUP BY pizza_type
+ORDER BY total_revenue DESC; 
+```
+📁 Output:(https://github.com/tanuvidhilitoriya1310-png/pizza-sales-analytics-project-sql/blob/master/Outputs/Percentage_contribution_of_each_pizza_type_to_total_revenue.csv)
+## 📈 Key Insights
+- Large-sized pizzas are the most preferred among customers
+- Pizza sales are evenly distributed across categories
+- Peak order times occur during afternoon hours
+- Certain categories consistently outperform others in sales
+## 📌 SQL Concepts Used
+- Basic: SELECT, COUNT, SUM, ORDER BY
+- Intermediate: GROUP BY, JOIN, LIMIT
+- Advanced: Subqueries, Aggregations, CTEs,Window functions
+## 🚀 How to Use This Project
+- Import the dataset into MySQL
+- Execute queries for analysis
+- Export results into CSV files
+- Analyze outputs for insights
+## 🚀 Conclusion
+- This project demonstrates how SQL can be effectively used to analyze structured data and extract valuable business insights. The findings can help improve sales strategies, inventory management, and customer satisfaction.
+## 📌 Future Improvements
+- Integrate with Power BI for interactive dashboards
+- Perform predictive analysis using Python
+- Automate reporting using scripts
+## 🙌 Author
 Vidhi Pathak
 Aspiring Data Analyst skilled in SQL, Excel, and Power BI
-⭐ If you like this project
+## ⭐ If you like this project
 Give it a ⭐ on GitHub and feel free to connect!
