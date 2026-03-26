@@ -56,7 +56,8 @@ FROM
         INNER JOIN
     order_details ON pizzas.pizza_id = order_details.pizza_id;
 ```
-- 📁 Output: `Outputs/Total_revenue_generated.csv`
+- 📁 Output:[Download
+( https://github.com/tanuvidhilitoriya1310-png/pizza-sales-analytics-project-sql/blob/master/Outputs/Total_revenue_generated.csv )]
 ### 🔹 2. How many total orders were placed?
 ```sql
 select count(*) as total_no_of_orders
@@ -78,7 +79,7 @@ GROUP BY pizza_types.name
 ORDER BY most_ordered_quantity DESC
 LIMIT 5;
 ```
-📁 Output:`C:\Users\vidhi\OneDrive\Desktop\coding\sql_pizza_sales_Project\Outputs\Top_5_most_ordered_pizza_type.csv`
+📁 Output:`Outputs/Top_5_most_ordered_pizza_type.csv`
 📈 Key Insights
 Large-sized pizzas are the most preferred among customers
 A few pizza types contribute significantly to overall revenue
