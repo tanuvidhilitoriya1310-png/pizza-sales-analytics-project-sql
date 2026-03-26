@@ -25,7 +25,7 @@
 - Pizza types
 - Pizza sizes and prices
 ## 📂 Project Structure
-<pre> ```pizza-sales-sql-basic-to-advanced/
+<pre> ``` pizza-sales-sql-basic-to-advanced/
 │
 ├── datasets/
 │   └── pizza_sales.csv
@@ -44,7 +44,7 @@
 │   ├── top_3_revenue_pizzas.csv
 │   └── revenue_contribution.csv
 │
-└── README.md``` </pre>
+└── README.md ``` </pre>
 🔍 Key Analysis Performed
 🔹 Basic Analysis
 Retrieved total number of orders placed
