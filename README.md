@@ -45,30 +45,12 @@
 │   └── revenue_contribution.csv
 │
 └── README.md </pre>
-🔍 Key Analysis Performed
-🔹 Basic Analysis
-Retrieved total number of orders placed
-Calculated total revenue generated from pizza sales
-Identified the highest-priced pizza
-Found the most commonly ordered pizza size
-Listed top 5 most ordered pizza types
-🔹 Intermediate Analysis
-Joined multiple tables to calculate total quantity of each pizza sold
-Analyzed category-wise pizza distribution
-Determined order trends and patterns
-🔹 Advanced Analysis
-Calculated revenue contribution by each pizza type
-Identified peak ordering hours
-Analyzed cumulative revenue over time
-Evaluated performance of different pizza categories
-📊 Sample SQL Query
-Sql
-Copy code
-SELECT p.pizza_type_id, SUM(od.quantity) AS total_quantity
-FROM order_details od
-JOIN pizzas p ON od.pizza_id = p.pizza_id
-GROUP BY p.pizza_type_id
-ORDER BY total_quantity DESC;
+## 🔍 Key Analysis Performed
+### 🔹 1. What is the total revenue generated?
+``` SELECT SUM(total_price) AS total_revenue
+FROM pizza_sales; ```
+
+📁 Output: outputs/total_revenue.csv
 📈 Key Insights
 Large-sized pizzas are the most preferred among customers
 A few pizza types contribute significantly to overall revenue
