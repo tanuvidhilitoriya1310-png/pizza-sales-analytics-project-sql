@@ -63,7 +63,7 @@ FROM
 select count(*) as total_no_of_orders
 from orders;
 ```
-📁 Output:`Outputs/Total_number_of_orders.csv`
+📁 Output:(https://github.com/tanuvidhilitoriya1310-png/pizza-sales-analytics-project-sql/blob/master/Outputs/Total_number_of_orders.csv)
 ### 🔹 3. Which are the top 5 most ordered pizza types?
 ```sql
 SELECT 
