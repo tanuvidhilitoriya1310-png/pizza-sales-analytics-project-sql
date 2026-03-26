@@ -26,25 +26,7 @@
 - Pizza sizes and prices
 ## 📂 Project Structure
 pizza-sales-sql-basic-to-advanced/
-│
-├── datasets/
-│   └── pizza_sales.csv
-│
-├── sql_queries/
-│   ├── basic_queries.sql
-│   ├── intermediate_queries.sql
-│   └── advanced_queries.sql
-│
-├── outputs/
-│   ├── total_orders.csv
-│   ├── total_revenue.csv
-│   ├── top_5_pizzas.csv
-│   ├── most_common_size.csv
-│   ├── category_quantity.csv
-│   ├── top_3_revenue_pizzas.csv
-│   └── revenue_contribution.csv
-│
-└── README.md
+<pre> ```plaintext pizza-sales-sql-basic-to-advanced/ │ ├── datasets/ │ └── pizza_sales.csv │ ├── sql_queries/ │ ├── basic_queries.sql │ ├── intermediate_queries.sql │ └── advanced_queries.sql │ ├── outputs/ │ ├── total_orders.csv │ ├── total_revenue.csv │ ├── top_5_pizzas.csv │ ├── most_common_size.csv │ ├── category_quantity.csv │ ├── top_3_revenue_pizzas.csv │ └── revenue_contribution.csv │ ├── screenshots/ │ └── dashboard.png │ ├── .gitignore └── README.md ``` </pre>
 🔍 Key Analysis Performed
 🔹 Basic Analysis
 Retrieved total number of orders placed
