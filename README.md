@@ -56,14 +56,13 @@ FROM
         INNER JOIN
     order_details ON pizzas.pizza_id = order_details.pizza_id;
 ```
-- 📁 Output:[Download
-( https://github.com/tanuvidhilitoriya1310-png/pizza-sales-analytics-project-sql/blob/master/Outputs/Total_revenue_generated.csv )]
+- 📁 Output:( https://github.com/tanuvidhilitoriya1310-png/pizza-sales-analytics-project-sql/blob/master/Outputs/Total_revenue_generated.csv )
 ### 🔹 2. How many total orders were placed?
 ```sql
 select count(*) as total_no_of_orders
 from orders;
 ```
-📁 Output:(https://github.com/tanuvidhilitoriya1310-png/pizza-sales-analytics-project-sql/blob/master/Outputs/Total_number_of_orders.csv)
+- 📁 Output:(https://github.com/tanuvidhilitoriya1310-png/pizza-sales-analytics-project-sql/blob/master/Outputs/Total_number_of_orders.csv)
 ### 🔹 3. Which are the top 5 most ordered pizza types?
 ```sql
 SELECT 
@@ -79,7 +78,22 @@ GROUP BY pizza_types.name
 ORDER BY most_ordered_quantity DESC
 LIMIT 5;
 ```
-📁 Output:`Outputs/Top_5_most_ordered_pizza_type.csv`
+- 📁 Output:(https://github.com/tanuvidhilitoriya1310-png/pizza-sales-analytics-project-sql/blob/master/Outputs/Top_5_most_ordered_pizza_type.csv)
+### 🔹 4. What is the most commonly ordered pizza size?
+```sql
+SELECT 
+    pizzas.size AS size,
+    COUNT(order_details.order_id_details) AS order_count
+FROM
+    pizzas
+        INNER JOIN
+    order_details ON pizzas.pizza_id = order_details.pizza_id
+GROUP BY size
+ORDER BY order_count DESC
+LIMIT 1;
+```
+- 📁 Output:(https://github.com/tanuvidhilitoriya1310-png/pizza-sales-analytics-project-sql/blob/master/Outputs/Most_Common_Pizza_size_ordered.csv)
+
 📈 Key Insights
 Large-sized pizzas are the most preferred among customers
 A few pizza types contribute significantly to overall revenue
