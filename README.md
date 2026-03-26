@@ -47,10 +47,16 @@
 └── README.md </pre>
 ## 🔍 Key Analysis Performed
 ### 🔹 1. What is the total revenue generated?
-``` SELECT SUM(total_price) AS total_revenue
-FROM pizza_sales; ```
-
-📁 Output: outputs/total_revenue.csv
+```sql 
+SELECT 
+    ROUND(SUM(order_details.quantity * pizzas.price),
+            2) AS total_revenue
+FROM
+    pizzas
+        INNER JOIN
+    order_details ON pizzas.pizza_id = order_details.pizza_id;
+```
+📁 Output: `Outputs/Total_revenue_generated.csv`
 📈 Key Insights
 Large-sized pizzas are the most preferred among customers
 A few pizza types contribute significantly to overall revenue
