@@ -1,9 +1,9 @@
 # 🍕 Pizza Sales Analysis using SQL
 ## 📌 Project Overview
-- This project presents an end-to-end SQL analysis of a pizza sales dataset using MySQL. It focuses on extracting meaningful business insights through basic, intermediate, and advanced SQL queries.
+##### This project presents an end-to-end SQL analysis of a pizza sales dataset using MySQL.
+##### It focuses on extracting meaningful business insights through basic, intermediate, and advanced SQL queries.
 
-- The goal is to analyze:
-
+##### The goal is to analyze:
 - Sales performance
 - Customer preferences
 - Product demand
@@ -19,7 +19,7 @@
 - MySQL Workbench
 - Excel (for initial data understanding)
 ## 📂 Dataset Description
-- The dataset contains information about:
+##### The dataset contains information about:
 - Orders
 - Order details
 - Pizza types
@@ -162,13 +162,13 @@ ORDER BY total_revenue DESC;
 - Export results into CSV files
 - Analyze outputs for insights
 ## 🚀 Conclusion
-- This project demonstrates how SQL can be effectively used to analyze structured data and extract valuable business insights. The findings can help improve sales strategies, inventory management, and customer satisfaction.
+##### This project demonstrates how SQL can be effectively used to analyze structured data and extract valuable business insights. The findings can help improve sales strategies, inventory management, and customer satisfaction.
 ## 📌 Future Improvements
 - Integrate with Power BI for interactive dashboards
 - Perform predictive analysis using Python
 - Automate reporting using scripts
 ## 🙌 Author
-Vidhi Pathak
-Aspiring Data Analyst skilled in SQL, Excel, and Power BI
+#### Vidhi Pathak
+##### Aspiring Data Analyst skilled in SQL, Excel, and Power BI
 ## ⭐ If you like this project
-Give it a ⭐ on GitHub and feel free to connect!
+##### Give it a ⭐ on GitHub and feel free to connect!
